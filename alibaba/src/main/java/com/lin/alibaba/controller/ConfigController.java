@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("config")
 public class ConfigController {
 
-    @NacosValue(value = "${useLocalCache:false}", autoRefreshed = true)
-    private boolean useLocalCache;
+    @NacosValue(value = "${spring.application.name}", autoRefreshed = true)
+    private String appName;
 
     @GetMapping(value = "/get")
     @ResponseBody
-    public boolean get() {
-        return useLocalCache;
+    public String get() {
+        return appName;
     }
 }
