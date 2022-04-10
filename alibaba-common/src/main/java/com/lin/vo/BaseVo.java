@@ -14,6 +14,8 @@ public class BaseVo {
 
     private Integer id;
 
+    private String mess;
+
     private Date createTime;
 
 }

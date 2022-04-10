@@ -1,0 +1,6 @@
+####### practice-consumer.yml #######
+
+server:
+  port: 8081
+
+
