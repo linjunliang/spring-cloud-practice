@@ -1,5 +1,0 @@
-
-nacos:
-  config:
-    server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8804}
-    data-id: alibaba-producer.yml
