@@ -20,12 +20,16 @@ import java.util.Date;
 @RefreshScope
 public class ProducerController {
 
+    @Value("${server.port}")
+    private String serverPort;
+
     @GetMapping("/produce/{id}")
     public BaseVo producer(@PathVariable Integer id){
+        String mess = String.format("producer【%s】 say hi to u !!!", this.serverPort);
         BaseVo result = new BaseVo();
         result.setId(id);
         result.setCreateTime(new Date());
-        result.setMess("producer say 'hello world'");
+        result.setMess(mess);
         return result;
     }
 
