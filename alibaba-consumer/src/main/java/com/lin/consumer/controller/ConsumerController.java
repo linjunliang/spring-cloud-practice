@@ -1,12 +1,13 @@
 package com.lin.consumer.controller;
 
+import com.lin.consumer.api.ProducerFeign;
 import com.lin.vo.BaseVo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
+import javax.annotation.Resource;
 
 /**
  * 服务消费者Controller
@@ -18,11 +19,12 @@ import java.util.Date;
 @RequestMapping("/lin/consumer")
 public class ConsumerController {
 
+    @Resource
+    private ProducerFeign producerFeign;
+
     @GetMapping("/consume/{id}")
     public BaseVo consume(@PathVariable Integer id){
-        BaseVo result = new BaseVo();
-        result.setId(id);
-        result.setCreateTime(new Date());
+        BaseVo result = producerFeign.producer(id);
         return result;
     }
 }

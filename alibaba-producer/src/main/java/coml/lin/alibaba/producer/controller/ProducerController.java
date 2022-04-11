@@ -25,6 +25,7 @@ public class ProducerController {
         BaseVo result = new BaseVo();
         result.setId(id);
         result.setCreateTime(new Date());
+        result.setMess("producer say 'hello world'");
         return result;
     }
 
