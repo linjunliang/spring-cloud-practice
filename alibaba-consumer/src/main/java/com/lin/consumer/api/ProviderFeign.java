@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author: lin
  * @date: 2022/4/10
  */
-@FeignClient("practice-producer")
-public interface ProducerFeign {
+@FeignClient("practice-provider")
+public interface ProviderFeign {
 
     /**
      * feign 调用服务消费
      * @param id
      * @return
      */
-    @GetMapping("/lin/producer/produce/{id}")
-    BaseVo producer(@PathVariable Integer id);
+    @GetMapping("/lin/provider/provide/{id}")
+    BaseVo provide(@PathVariable Integer id);
 }

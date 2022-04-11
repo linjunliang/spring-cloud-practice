@@ -1,4 +1,4 @@
-package coml.lin.alibaba.producer;
+package coml.lin.alibaba.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +13,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class AlibabaProducerApplication {
+public class AlibabaProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlibabaProducerApplication.class, args);
+        SpringApplication.run(AlibabaProviderApplication.class, args);
     }
 
 }

@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: practice-producer
+    name: practice-provider
 
   cloud:
     nacos:

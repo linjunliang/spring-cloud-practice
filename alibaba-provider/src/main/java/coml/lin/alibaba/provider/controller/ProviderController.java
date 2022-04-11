@@ -1,4 +1,4 @@
-package coml.lin.alibaba.producer.controller;
+package coml.lin.alibaba.provider.controller;
 
 import com.lin.vo.BaseVo;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,16 +16,16 @@ import java.util.Date;
  * @date 2022/4/10
  */
 @RestController
-@RequestMapping("/lin/producer")
+@RequestMapping("/lin/provider")
 @RefreshScope
-public class ProducerController {
+public class ProviderController {
 
     @Value("${server.port}")
     private String serverPort;
 
-    @GetMapping("/produce/{id}")
-    public BaseVo producer(@PathVariable Integer id){
-        String mess = String.format("producer【%s】 say hi to u !!!", this.serverPort);
+    @GetMapping("/provide/{id}")
+    public BaseVo provide(@PathVariable Integer id){
+        String mess = String.format("provider【%s】 say hi to u !!!", this.serverPort);
         BaseVo result = new BaseVo();
         result.setId(id);
         result.setCreateTime(new Date());

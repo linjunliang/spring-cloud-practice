@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>../alibaba-producer</module>
+        <module>../alibaba-provider</module>
         <module>../alibaba-common</module>
         <module>../alibaba-consumer</module>
     </modules>

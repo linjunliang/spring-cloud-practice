@@ -1,6 +1,6 @@
 package com.lin.consumer.controller;
 
-import com.lin.consumer.api.ProducerFeign;
+import com.lin.consumer.api.ProviderFeign;
 import com.lin.vo.BaseVo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,11 +20,11 @@ import javax.annotation.Resource;
 public class ConsumerController {
 
     @Resource
-    private ProducerFeign producerFeign;
+    private ProviderFeign providerFeign;
 
     @GetMapping("/consume/{id}")
     public BaseVo consume(@PathVariable Integer id){
-        BaseVo result = producerFeign.producer(id);
+        BaseVo result = providerFeign.provide(id);
         return result;
     }
 }

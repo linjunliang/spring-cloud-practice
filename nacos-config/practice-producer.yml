@@ -1,4 +1,4 @@
-####### practice-producer.yml #######
+####### practice-provider.yml #######
 
 server:
   port: 8071
