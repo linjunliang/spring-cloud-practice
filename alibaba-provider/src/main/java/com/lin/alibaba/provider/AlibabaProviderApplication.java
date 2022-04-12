@@ -1,4 +1,4 @@
-package coml.lin.alibaba.provider;
+package com.lin.alibaba.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

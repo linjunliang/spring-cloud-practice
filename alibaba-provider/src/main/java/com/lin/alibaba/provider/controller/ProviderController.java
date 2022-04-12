@@ -1,4 +1,4 @@
-package coml.lin.alibaba.provider.controller;
+package com.lin.alibaba.provider.controller;
 
 import com.lin.vo.BaseVo;
 import org.springframework.beans.factory.annotation.Value;
